@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Monsieur+La+Doulaise&family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+        <div class="container">
+            <form>
+                <div id="output">
+                    <input type="text" name="output" />
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="output.value = ''"/>
+                    <input type="button" value="DE" onclick="output.value = output.value.toString().slice(0,-1)"/>
+                    <input type="button" value="." onclick="output.value += '.'"/>
+                    <input type="button" value="/" onclick="output.value += '/'"/>
+                </div><div>
+                    <input type="button" value="7" onclick="output.value += '7'" />
+                    <input type="button" value="8" onclick="output.value += '8'"/>
+                    <input type="button" value="9" onclick="output.value += '9'"/>
+                    <input type="button" value="*" onclick="output.value += '*'"/>
+                </div><div>
+                    <input type="button" value="4" onclick="output.value += '4'"/>
+                    <input type="button" value="5" onclick="output.value += '5'"/>
+                    <input type="button" value="6" onclick="output.value += '6'"/>
+                    <input type="button" value="-" onclick="output.value += '-'"/>
+                </div><div>
+                    <input type="button" value="1" onclick="output.value += '1'"/>
+                    <input type="button" value="2" onclick="output.value += '2'"/>
+                    <input type="button" value="3" onclick="output.value += '3'"/>
+                    <input type="button" value="+" onclick="output.value += '+'"/>
+                </div><div>
+                    <input type="button" value="0" onclick="output.value += '0'"/>
+                    <input type="button" value="00" onclick="output.value += '00'"/>
+                    <input type="button" value="=" id="equal" onclick="output.value = eval(output.value)"/>
+                </div>
+            </form>
+        </div>
+    <script>
+        var bbc = document.getElementById("equal").innerHTML = "";
+        document.write(bbc);
+
+        var dbc = document.getElementsByClassName("button").innerHTML = "";
+        document.write(dbc);
+
+    </script>
+</body>
+</html>
